@@ -131,6 +131,9 @@ def GetPlayerName():
   print()
   PlayerName = input('Please enter your name: ')
   print()
+  while len(PlayerName) == 0:
+    print("you must enter a name")
+    PlayerName = input('Please enter your name: ')
   return PlayerName
 
 def GetChoiceFromUser():
