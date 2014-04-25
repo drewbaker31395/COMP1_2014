@@ -128,25 +128,13 @@ def IsNextCardHigher(LastCard, NextCard):
   return Higher
 
 def GetPlayerName():
-  WantName = True 
-  while WantName == True:
-    WantName = input("Do you want to save your score (yes/no)?: ")
-    WantName = WantName.upper()
-    WantName = WantName[0]
-    if WantName == 'Y':
-      print()
-      PlayerName = input('Please enter your name: ')
-      print()
-      while len(PlayerName) == 0:
-        print("you must enter a name")
-        PlayerName = input('Please enter your name: ')
-        return PlayerName
-    elif WantName == 'N':
-     WantName = False
-    else:
-      print("Please enter yes or no")
-      WantName = True
-     
+  print()
+  PlayerName = input('Please enter your name: ')
+  print()
+  while len(PlayerName) == 0:
+    print("you must enter a name")
+    PlayerName = input('Please enter your name: ')
+  return PlayerName
 
 def GetChoiceFromUser():
   Choice = input('Do you think the next card will be higher than the last card (enter y or n)? ')
